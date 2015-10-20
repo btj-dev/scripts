@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+## This program removes temporary or unwanted files. Options are provided for
+## various programs (e.g. LaTeX intermediate files). To view the detailed
+## documentation for this program, execute `clean -h`.
+
+import argparse
+import sys
+import subprocess
+
+def parse_args(argv):
+    ''' TODO:
+    Add options for 
+    LaTeX (*.aux, *.toc, *.bib, *.bbl, *.blg, *.synctex.gz)
+    Recursive (-r)
+    Directory name
+    '''
+    return None
+
+def main(argv):
+    args = parse_args(argv)
+    subprocess.call('rm -f *~ \#*', shell=True)
+
+if __name__ == '__main__':
+    main(sys.argv[1:])
